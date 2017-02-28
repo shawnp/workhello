@@ -1,26 +1,16 @@
-
 {% extends 'layouts/base.html'%}
-
 {% load humanize %}
-
 {% block title %} HomePage - {{ block.super}} {% endblock %}
-
-
 {% block content %}
 	{% for thing in things	%}
-	<h2>
-		<a href="{% url 'thing_detail' slug=thing.slug %}">
-			{{thing.name}}
-		</a>
-	</h2>		
-	<p>{{ thing.description }}</p>
+			<p>{{thing.name}}
+			<p>{{thing.description}}
+			<p>{{thing.slug}}
 				<hr></hr>
 	{% endfor %} 
+	
+	
+</br>
+<p>Page 44</p>
 {% endblock content %}
-
-
-{% block text %}
-<b>Page 45</b>
-{% endblock text %}
-
 

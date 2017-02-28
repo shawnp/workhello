@@ -3,10 +3,13 @@
 {% block title %} HomePage - {{ block.super}} {% endblock %}
 {% block content %}
 	{% for thing in things	%}
-			<p>{{thing.name}}
-			<p>{{thing.description}}
-			<p>{{thing.slug}}
-				<hr></hr>
+	<h2>
+			<a href="{% url 'thing_detail' slug=thing.slug %}">
+			{{ thing.name }}
+			</a>	
+	</h2>
+	<p> {{thing.description}} </p>
+	<hr></hr>
 	{% endfor %} 
 	
 	

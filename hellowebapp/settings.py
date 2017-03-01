@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.staticfiles',
     'debug_toolbar',
+    'registration',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -128,3 +129,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Account lease time
+ACCOUNT_ACTIVATIONS_DAYS = 7
+
+#Add “email” ability to your app
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL='testing@example.com'
+EMAIL_HOST_USER=''
+EMAIL_HOST_PASSWORD=''
+EMAIL_USE_TLS=False
+EMAIL_PORT=1025
+
+#redirect to after successful registration
+LOGIN_REDIRECT_URL="home"

@@ -32,15 +32,17 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'collection',
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
+    'registration',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.humanize',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'registration',
+    
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -133,7 +135,7 @@ STATIC_URL = '/static/'
 # Account lease time
 ACCOUNT_ACTIVATIONS_DAYS = 7
 
-#Add “email” ability to your app
+#Add email ability to your app
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL='testing@example.com'
 EMAIL_HOST_USER=''
